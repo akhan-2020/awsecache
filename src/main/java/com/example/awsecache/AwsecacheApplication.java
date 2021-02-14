@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
 @Configuration
-@EnableContextInstanceData
 @EnableElastiCache({@CacheClusterConfig(name = "redispoc1", expiration = 6000)})
 public class AwsecacheApplication {
 
