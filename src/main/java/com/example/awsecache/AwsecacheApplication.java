@@ -13,12 +13,13 @@ public class AwsecacheApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(AwsecacheApplication.class, args);
-		System.out.println("test");
+		String test = calculateExpensiveValue("TESTSB");
+		System.out.println("finsihed");
 	}
 
 	@Cacheable("redispoc1")
-	public String calculateExpensiveValue(String key) {
-		return "test";
+	public static String calculateExpensiveValue(String key) {
+		return "test-from-sb";
 	}
 
 }
