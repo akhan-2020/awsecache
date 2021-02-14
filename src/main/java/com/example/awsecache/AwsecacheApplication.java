@@ -9,7 +9,6 @@ import org.springframework.cloud.aws.context.config.annotation.EnableContextInst
 import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
-@Configuration
 @EnableElastiCache({@CacheClusterConfig(name = "redispoc1", expiration = 6000)})
 public class AwsecacheApplication {
 
