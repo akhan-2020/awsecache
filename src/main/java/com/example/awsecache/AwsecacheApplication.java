@@ -5,8 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cloud.aws.cache.config.annotation.CacheClusterConfig;
 import org.springframework.cloud.aws.cache.config.annotation.EnableElastiCache;
+import org.springframework.cloud.aws.context.config.annotation.EnableContextInstanceData;
+import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
+@Configuration
+@EnableContextInstanceData
 @EnableElastiCache({@CacheClusterConfig(name = "redispoc1", expiration = 6000)})
 public class AwsecacheApplication {
 
